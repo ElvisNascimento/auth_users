@@ -42,20 +42,12 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   
     // Preenche os dados do crachá com as informações do usuário autenticado
     document.getElementById("cracha").style.display = "block";
-    document.getElementById("cardNumber").innerText = userData.cardNumber;
+    document.getElementById("idNumber").innerText = userData.id;
     document.getElementById("userImage").src = userData.image;
     document.getElementById("firstName").innerText = userData.firstName;
     document.getElementById("lastName").innerText = userData.lastName;
-    document.getElementById("address").innerText = userData.address;
-    document.getElementById("city").innerText = userData.city;
     document.getElementById("email").innerText = userData.email;
-    document.getElementById("phone").innerText = userData.phone;
     document.getElementById("gender").innerText = userData.gender;
-    document.getElementById("hair").innerText = userData.hair;
-    document.getElementById("eye").innerText = userData.eyeColor;
-    document.getElementById("eyeColor").innerText = userData.eyeColor;
-    document.getElementById("height").innerText = userData.height;
-    document.getElementById("weight").innerText = userData.weight;
 
   }
   
