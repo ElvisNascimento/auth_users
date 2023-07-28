@@ -1,4 +1,5 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
+document.getElementById("loginForm")
+.addEventListener("submit", function(event) {
     event.preventDefault();
   
     const username = document.getElementById("username").value;
@@ -16,7 +17,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
       });
   });
   
-  async function authenticateUser(username, password) {
+  async function authenticateUser(username , password){
     // Faz a requisição para a API de autenticação com os dados do usuário
     const response = await fetch("https://dummyjson.com/users");
     const data = await response.json();
@@ -39,7 +40,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   function showUserData(userData) {
     // Esconde o formulário de login
     document.getElementById("loginForm").style.display = "none";
-  
     // Preenche os dados do crachá com as informações do usuário autenticado
     document.getElementById("cracha").style.display = "block";
     document.getElementById("idNumber").innerText = userData.id;
@@ -48,6 +48,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     document.getElementById("lastName").innerText = userData.lastName;
     document.getElementById("email").innerText = userData.email;
     document.getElementById("gender").innerText = userData.gender;
-
+    document.getElementById("city").innerText = userData.company.address.city;
   }
   
